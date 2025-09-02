@@ -1,0 +1,19 @@
+[Unit]
+Description=Run RabbitMQ for messages
+# Runs after network connection is active
+After=network.target
+
+[Service]
+# Identifies the software and file being run as well as the working directory of the file
+ExecStart=/usr/bin/php /home/dev-db/group490/it490-2025-ctrl-alt-elite/RabbitMQServerSample.php
+WorkingDirectory=/home/dev-db/group490/it490-2025-ctrl-alt-elite
+# Retries to run if process fails every 3 seconds
+Restart=always
+RestartSec=3
+User=dev-db
+# Logging + Errors
+StandardOutput=append:/var/log/runServer.log
+StandardError=append:/var/log/runServer.err.log
+
+[Install]
+WantedBy=multi-user.target

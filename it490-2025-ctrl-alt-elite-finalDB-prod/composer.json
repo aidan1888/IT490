@@ -1,0 +1,13 @@
+{
+    "name": "matt/it490",
+    "type": "serum",
+    "authors": [
+        {
+            "name": "CARLOS",
+            "email": "Cmp59@njit.edu"
+        }
+    ],
+    "require": {
+        "php-amqplib/php-amqplib": "^2.10"
+    }
+}
